@@ -17,7 +17,7 @@
         $_SESSION['ci']=$ci;
         $_SESSION['nombre']=$nombre;
         echo 1;
-        header("Location:../../PROYECTO%20UCB%20WALLET%20SIS%201/Vista/Principal.php");
+        header("Location:../../PROYECTO VIDEO STORE/Vista/Principal.php");
 
     }else{
         header("Location:../index.php");
