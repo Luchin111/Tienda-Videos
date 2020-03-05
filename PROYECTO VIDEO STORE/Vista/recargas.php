@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Recarga Teleferico </title>
+      <title>NUEVO VIDEO </title>
       <!-- Meta tags -->
       <meta charset="UTF-8">
       <meta http-equiv="Expires" content="0">
@@ -41,13 +41,27 @@
        
          
       <h1 class="header-w3ls" >
-         Formulario de Recarga
+         Formulario Nuevo Video
       </h1>
       <div class="art-bothside">
       <form action="../Procesos/recargas.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
             <div class="info-agile-persnal">
-               <h3>Detalles Personales</h3>
+               <h3>Detalles Del Video</h3>
                
+               <div class="form-group">
+                   <div class="form-mid-w3ls">
+                     <input type="text" placeholder="CI" required id="carnet" name="carnet">
+                  </div>
+                  <div class="form-mid-w3ls">
+                     <input type="text" placeholder="Nombre" required id="nombre" name="nombre">
+                  </div>
+                  
+				  
+                  <div class="form-mid-w3ls">
+                     <input type="text" placeholder="<?php echo date("Y-n-j"); ?>" id="fecha" name="fecha" required value="<?php echo date("j/n/Y"); ?>" readonly>
+                  </div>
+                  <div class="clear"></div>
+               </div>
                <div class="form-group">
                    <div class="form-mid-w3ls">
                      <input type="text" placeholder="CI" required id="carnet" name="carnet">
@@ -88,7 +102,7 @@
          </form>
       </div>
       <div class="copy">
-         <p>&copy;2019 Formulario de Recarga. | Diseñado por <a>Luis Medina</a></p>
+         <p>&copy;2020 Formulario par nuevos videos. | Diseñado por <a>Luis Medina</a></p>
       </div>
       
              <script

@@ -300,7 +300,7 @@ ul {
 /*-- //Reset-Code --*/
 
 body {
-    background: url(../images/banner.jpg);
+    background: url(../img/back-new-video.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -318,7 +318,7 @@ h1.header-w3ls {
 }
 .info-agile-persnal h3{
 	font-size: 30px;
-    color: #ff5e00;
+    color: #ffffff;
     text-align:left;
     margin: 10px 0px;
     letter-spacing: 3px;

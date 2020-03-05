@@ -23,12 +23,12 @@
     
   <head>
     <meta charset="utf-8">
-    <title>َLOGIN TELEFERICO</title>
+    <title>َLOGIN TIENDA</title>
     <link rel="stylesheet" href="css/stylelogin.css">
   </head>
   <body>
 <form class="box" action="Procesos/login.php", method="post">
-  <h1>LOGIN TELEFERICO</h1>
+  <h1>LOGIN TIENDA</h1>
   <input type="text"  placeholder="Usuario" name="ci" id="ci">
   <input type="password" name="pass" id ="pass" placeholder="Constraseña">
   <input type="submit" name="Entrar" value="Entrar">
