@@ -9,13 +9,13 @@
     $c=new conectar();
     $conexion=$c->conexion();
 
-    $sql="SELECT * from usuario_venta where ci='$ci' and pass='$pass';";
+    $sql="SELECT * from user where user_nick='$ci' and user_password='$pass';";
     $result=mysqli_query($conexion,$sql);
     $ver=mysqli_fetch_row($result);
-    $nombre=$sql['nombre'];
+    $nombre=$ver['1'];
     if(mysqli_num_rows($result) > 0){
         $_SESSION['ci']=$ci;
-        $_SESSION['nombre']=$nombre;
+        $_SESSION['name']=$nombre;
         echo 1;
         header("Location:../../PROYECTO VIDEO STORE/Vista/Principal.php");
 

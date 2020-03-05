@@ -22,7 +22,7 @@
 </head>   
    <header>
     <div class="contenedor">
-        <h1 class="icon-wallet">USUARIO:<?php echo $_SESSION['ci'];?></h1>
+        <h1 class="icon-wallet">USUARIO:<?php echo $_SESSION['name'];?></h1>
         <input type="checkbox" id="menu-bar">
         <label class="fontawesome-align-justify" for="menu-bar"></label>
                 <nav class="menu">
@@ -105,7 +105,7 @@
                         <h4>Modificar Costos</h4>
                     </article>
                     <article>
-                        <a href="descuentos.php"><img  src="img/descuentos2.png" title="Descuento de Peliculas" alt=""></a>
+                        <a href="Precios.php"><img  src="img/descuentos2.png" title="Descuento de Peliculas" alt=""></a>
                         <h4>Modificar Descuentos</h4>
                     </article>
                 </div>
