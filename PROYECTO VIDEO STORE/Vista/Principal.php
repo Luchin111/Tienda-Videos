@@ -57,15 +57,15 @@
                 <h3>Videos</h3>
                 <div class="contenedor">
                     <article>
-                        <a href="recargas.php"><img src="img/añadir.jpg" title="Añadir Video" alt=""></a>
+                        <a href="recargas.php"><img src="img/añadir.png" title="Añadir Video" alt=""></a>
                         <h4>Añadir Video</h4>
                     </article>
                     <article>
-                        <img src="img/añadir-copia.jpg" title="Registrar Copia" alt="">
+                        <img src="img/añadir-copia.png" title="Registrar Copia" alt="">
                         <h4>Registrar nueva Copia</h4>
                     </article>
                     <article>
-                        <a href="Precios.php"><img  src="img/dar-de-baja.jpg" title="Dar de baja una copia" alt=""></a>
+                        <a href="Precios.php"><img  src="img/dar-de-baja.png" title="Dar de baja una copia" alt=""></a>
                         <h4>Registrar Bajas</h4>
                     </article>
                 </div>
@@ -75,7 +75,7 @@
                 <h3>Clientes</h3>
                 <div class="contenedor">
                     <article>
-                        <a href="recargas.php"><img src="img/add-user.jpg" title="Registrar Cliente" alt=""></a>
+                        <a href="recargas.php"><img src="img/add-user.png" title="Registrar Cliente" alt=""></a>
                         <h4>Registrar Cliente</h4>
                     </article>
                     <article>
@@ -83,7 +83,7 @@
                         <h4>Ver Clientes</h4>
                     </article>
                     <article>
-                        <a href="Precios.php"><img  src="img/bloquear-usuario.jpg" title="Bloquear Cliente" alt=""></a>
+                        <a href="Precios.php"><img  src="img/bloquear-usuario.png" title="Bloquear Cliente" alt=""></a>
                         <h4>Bloquear Cliente</h4>
                     </article>
                 </div>
@@ -105,7 +105,7 @@
                         <h4>Modificar Costos</h4>
                     </article>
                     <article>
-                        <a href="descuentos.php"><img  src="img/descuentos.png" title="Descuento de Peliculas" alt=""></a>
+                        <a href="descuentos.php"><img  src="img/descuentos2.png" title="Descuento de Peliculas" alt=""></a>
                         <h4>Modificar Descuentos</h4>
                     </article>
                 </div>
