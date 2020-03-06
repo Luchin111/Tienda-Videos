@@ -12,7 +12,7 @@ CREATE TABLE academy_award (
 -- Table: actor
 CREATE TABLE actor (
     actor_id int NOT NULL,
-    firts_name varchar(50) NOT NULL,
+    first_name varchar(50) NOT NULL,
     last_name varchar(50) NOT NULL,
     CONSTRAINT actor_pk PRIMARY KEY (actor_id)
 );
