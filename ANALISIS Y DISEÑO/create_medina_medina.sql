@@ -40,6 +40,15 @@ CREATE TABLE cost (
     CONSTRAINT cost_pk PRIMARY KEY (cost_id)
 );
 
+-- Table: bill (Factura)
+CREATE TABLE bill (
+    bill_id int NOT NULL,
+    bill_num int NOT NULL,
+    bill_date date,
+    bill_date_expiration date,
+    CONSTRAINT bill_pk PRIMARY KEY (bill_id)
+);
+
 -- Table: discount
 CREATE TABLE discount (
     discount_id int NOT NULL,
@@ -148,6 +157,7 @@ CREATE TABLE video_rent (
     discount_discount_id int NOT NULL,
     video_video_id int NOT NULL,
     cost_cost_id int NOT NULL,
+    bill_bill_id int,
     rent_date date NOT NULL,
     return_date date NOT NULL,
     rent_flag int NOT NULL,
@@ -223,7 +233,9 @@ ALTER TABLE title_variant ADD CONSTRAINT title_variant_video FOREIGN KEY title_v
 -- Reference: video_rent_cost (table: video_rent)
 ALTER TABLE video_rent ADD CONSTRAINT video_rent_cost FOREIGN KEY video_rent_cost (cost_cost_id)
     REFERENCES cost (cost_id);
-
+-- Reference: video_rent_bill (table: video_rent)
+ALTER TABLE video_rent ADD CONSTRAINT video_rent_bill FOREIGN KEY video_rent_bill (bill_bill_id)
+    REFERENCES bill (bill_id);
 -- Reference: video_rent_video (table: video_rent)
 ALTER TABLE video_rent ADD CONSTRAINT video_rent_video FOREIGN KEY video_rent_video (video_video_id)
     REFERENCES video (video_id);

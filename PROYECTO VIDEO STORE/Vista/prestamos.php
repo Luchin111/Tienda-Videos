@@ -42,11 +42,11 @@
   	<table style="margin: auto; width: 800px; border-collapse: separate; border-spacing: 10px 5px;">
   		<thead>
   			<th>Codigo</th>
-  			<th>CLiente Nombres</th>
+  			<th>Cliente Nombres</th>
             <th>Cliente Apellidos </th>
   			<th>No.Copias</th>
   			<th>Estado</th>
-  			<th> <a href="nuevo_prod1.php"> <button type="button" class="btn btn-info">Nuevo</button> </a> </th>
+  			<th> <a href="Nuevo_Prestamo.php"> <button type="button" class="btn btn-info">Nuevo Prestamo</button> </a> </th>
   		</thead>
   		
   		
@@ -67,8 +67,8 @@
           echo "<td>"; echo $filas['last_names']; echo "</td>";
           echo "<td>"; echo $filas['num']; echo "</td>";
           echo "<td>"; echo $filas['rent_flag']; echo "</td>";
-          echo "<td>  <a href='modif_prod1.php?no=".$filas['video_rent_id']."'> <button type='button' class='btn btn-success'>Modificar</button> </a> </td>";
-          echo "<td> <a href='eliminar_prod.php?no=".$filas['video_rent_id']."''><button type='button' class='btn btn-danger'>Eliminar</button></a> </td>";
+          echo "<td>  <a href='php?no=".$filas['video_rent_id']."'> <button type='button' class='btn btn-success'>Modificar</button> </a> </td>";
+          
         echo "</tr>";
       }
 
