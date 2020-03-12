@@ -97,7 +97,7 @@
                         <h4>Registrar Renta</h4>
                     </article>
                     <article>
-                        <img src="img/prestamos-realizados.png" title="Ver Rentas" alt="">
+                        <a href="prestamos.php"><img src="img/prestamos-realizados.png" title="Ver Rentas" alt=""></a>
                         <h4>Ver Prestamos</h4>
                     </article>
                     <article>
