@@ -18,11 +18,14 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ejemplo de interaccion con DB</title>
+<title>Prestamos</title>
 <style type="text/css">
 @import url("css/mycss.css");
 </style>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -33,58 +36,76 @@
 <body>
 <div class="todo">
   
+  
   <div id="cabecera">
   	<img src="img/swirl.png" width="1188" id="img1">
-      <h2>PRESTAMOS REALIZADOS</h2>
+    
+      
   </div>
   
-  <div id="contenido">
-  	<table style="margin: auto; width: 800px; border-collapse: separate; border-spacing: 10px 5px;">
-  		<thead>
-  			<th>Codigo</th>
-  			<th>Cliente Nombres</th>
-            <th>Cliente Apellidos </th>
-  			<th>No.Copias</th>
-  			<th>Estado</th>
   			<th> <a href="Nuevo_Prestamo.php"> <button type="button" class="btn btn-info">Nuevo Prestamo</button> </a> </th>
-  		</thead>
   		
-  		
-  		<?php
-      
-      $sentencia="SELECT b.video_rent_id, a.names, a.last_names, count(b.video_video_id) as num,
-      case rent_flag  when 1 then 'Devuelto'  when 2 then 'En Prestamo'  when 3 then 'Sin Devolver'  end as rent_flag FROM client a 
-      join video_rent b on a.client_id=b.client_client_id
-       join video c on b.video_video_id=c.video_id
-       group by b.rent_date
-       order by a.names desc";
-      $resultado=mysqli_query($conexion, $sentencia);
-      while($filas=mysqli_fetch_assoc($resultado))
-      {
-        echo "<tr>";
-          echo "<td>"; echo $filas['video_rent_id']; echo "</td>";
-          echo "<td>"; echo $filas['names']; echo "</td>";
-          echo "<td>"; echo $filas['last_names']; echo "</td>";
-          echo "<td>"; echo $filas['num']; echo "</td>";
-          echo "<td>"; echo $filas['rent_flag']; echo "</td>";
-          echo "<td>  <a href='php?no=".$filas['video_rent_id']."'> <button type='button' class='btn btn-success'>Modificar</button> </a> </td>";
-          
-        echo "</tr>";
-      }
 
-      ?>
-  	</table>
-  </div>
+
+  <div class="container">
+			<br />
+			<br />
+			<br />
+			<h2 align="center">PRESTAMOS REALIZADOS</h2><br />
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">Buscar</span>
+					<input type="text" name="search_text" id="search_text" placeholder="Busqueda por Cliente" class="form-control" />
+				</div>
+			</div>
+			<br />
+			<div id="result"></div>
+		</div>
+		<div style="clear:both"></div>
+		<br />
   
 	<div id="footer">
   		<img src="img/swirl2.png" id="img2">
   	</div>
 
 </div>
+<script>
+$(document).ready(function(){
+	load_data();
+	function load_data(query)
+	{
+		$.ajax({
+			url:"fetch.php",
+			method:"post",
+			data:{query:query},
+			success:function(data)
+			{
+				$('#result').html(data);
+			}
+		});
+	}
+	
+	$('#search_text').keyup(function(){
+		var search = $(this).val();
+		if(search != '')
+		{
+			load_data(search);
+		}
+		else
+		{
+			load_data();			
+		}
+	});
+});
+</script>
 
 
 </body>
 </html>
+
+
+
+
 
 <?php 
 
