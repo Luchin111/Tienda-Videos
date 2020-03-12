@@ -1,44 +1,4 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<meta charset="UTF-8">
-	<title>PHP Search</title>
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2" style="margin-top: 5%;">
-				<div class="row">
-				<form action="" method="POST"> 
-					<div class="col-md-6">
-						<input type="text" name="search" class='form-control' placeholder="Search By Name" value="" > 
-					</div>
-					<div class="col-md-6 text-left">
-						<button class="btn">Search</button>
-					</div>
-				</form>
 
-				<br>
-				<br>
-				</div>
-				<table class="table table-bordered">
-					<tr>
-						<th>Name</th>
-						<th>Amount</th>
-						<th>City</th>
-					</tr>
-					<tr>
-						<td>Kamal</td>
-						<td>10</td>
-						<td>Dhaka</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</div>
-</body>
-</html> 
 <?php 
 	session_start();
 	if(isset($_SESSION['ci'])){
@@ -70,6 +30,7 @@
       <!--//style sheet end here-->
       <link href="//fonts.googleapis.com/css?family=Barlow:300,400,500,600" rel="stylesheet">
       <link href="//fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    </head>
    <body>
    
@@ -82,12 +43,12 @@
        
          
       <h1 class="header-w3ls" >
-         Formulario Nuevo Video
+         Formulario Nuevo Prestamo
       </h1>
       <div class="art-bothside">
       <form action="../Procesos/recargas.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
             <div class="info-agile-persnal">
-               <h3>Detalles Del Video</h3>
+               <h3>Detalles Del Cliente</h3>
                
                <div class="form-group">
                    <div class="form-mid-w3ls">
@@ -103,26 +64,49 @@
                   </div>
                   <div class="clear"></div>
                </div>
-               <div class="form-group">
-                   <div class="form-mid-w3ls">
-                     <input type="text" placeholder="CI" required id="carnet" name="carnet">
-                  </div>
-                  <div class="form-mid-w3ls">
-                     <input type="text" placeholder="Nombre" required id="nombre" name="nombre">
-                  </div>
-                  
-				  
-                  <div class="form-mid-w3ls">
-                     <input type="text" placeholder="<?php echo date("Y-n-j"); ?>" id="fecha" name="fecha" required value="<?php echo date("j/n/Y"); ?>" readonly>
-                  </div>
-                  <div class="clear"></div>
-               </div>
-               
             </div>
             <div class="info-agile-persnal">
-               <h3>Detalles de la Recarga</h3>
+               <h3>Detalles de los Videos</h3>
                <div class="sub-agile-info">
-                  <h6>Ingrese...</h6>
+                  <h6>Ingrese los videos</h6>
+               </div>
+                  
+            </div>
+            <div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" style="margin-top: 5%;">
+				<div class="row">
+				<form action="" method="POST"> 
+					<div class="col-md-6">
+						<input type="text" name="search" class='form-control' placeholder="Search By Name" value="" > 
+					</div>
+					<div class="col-md-6 text-left">
+						<button class="btn">Search</button>
+					</div>
+				</form>
+
+				<br>
+				<br>
+				</div>
+				<table class="table table-bordered">
+					<tr>
+						<th>Name</th>
+						<th>Amount</th>
+						<th>City</th>
+					</tr>
+					<tr>
+						<td>Kamal</td>
+						<td>10</td>
+						<td>Dhaka</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+   <div class="info-agile-persnal">
+               <h3>Costo</h3>
+               <div class="sub-agile-info">
+                  <h6>Total a pagar :</h6>
                </div>
                <div class="form-group-three">
                  
@@ -130,21 +114,21 @@
                      <div class="form-mid-w3ls">
                      <input type="number" placeholder="Monto (Bs.)" required id="monto" name="monto">
                   </div>
-                  </div>
+               </div>
                   
-              
             </div>
-            <div class="set-reset">
-               <input  type="submit" value="Realizar Recarga" >
+          
+               <div class="set-reset">
+                  <input  type="submit" value="Realizar Prestamo" >
+                  
+                  <input type="reset" value="Cancelar">
                
-               <input type="reset" value="Cancelar">
-            
-            </div>
-         </form>
-      </div>
-      <div class="copy">
-         <p>&copy;2020 Formulario par nuevos videos. | Diseñado por <a>Luis Medina</a></p>
-      </div>
+               </div>
+               <div class="copy">
+                   <p>&copy;2020 Formulario par nuevos videos. | Diseñado por <a>Luis Medina</a></p>
+               </div>
+         </div>
+      </form>
       
              <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -153,6 +137,16 @@
              
    </body>
 </html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>PHP Search</title>
+</head>
+<body>
+	
+</body>
+</html> 
 <?php 
 }else{
 header("location:../index.php");

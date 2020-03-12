@@ -93,7 +93,7 @@
                 <h3>Operaciones</h3>
                 <div class="contenedor">
                     <article>
-                        <a href="recargas.php"><img src="img/prestamo.png" title="Nueva Renta" alt=""></a>
+                        <a href="Nuevo_prestamo.php"><img src="img/prestamo.png" title="Nueva Renta" alt=""></a>
                         <h4>Registrar Renta</h4>
                     </article>
                     <article>
